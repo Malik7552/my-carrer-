@@ -1,0 +1,540 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Malik | Developer</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050505;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5,5,5,0.85);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00aaff;
+}
+
+nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 10%;
+    background:
+        radial-gradient(circle at 80% 30%, #003b55, transparent 35%),
+        #050505;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.tag {
+    color: #00aaff;
+    font-size: 16px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: .9;
+    margin-bottom: 30px;
+}
+
+h1 span {
+    color: #00aaff;
+}
+
+.hero p {
+    color: #999;
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 25px;
+    background: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+}
+
+/* SECTIONS */
+section {
+    padding: 100px 10%;
+}
+
+.title {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+.title span {
+    color: #00aaff;
+}
+
+/* ABOUT */
+.about {
+    background: #0c0c0c;
+}
+
+.about p {
+    max-width: 800px;
+    color: #999;
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* PROJECTS */
+.projects {
+    background: #050505;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.project {
+    background: #0d0d0d;
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 30px;
+    transition: .3s;
+}
+
+.project:hover {
+    transform: translateY(-8px);
+    border-color: #00aaff;
+}
+
+.project-number {
+    color: #00aaff;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.project p {
+    color: #888;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* SKILLS */
+.skills {
+    background: #0c0c0c;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    padding: 15px 22px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    color: #ccc;
+}
+
+/* FUTURE */
+.future {
+    text-align: center;
+}
+
+.future p {
+    color: #888;
+    font-size: 19px;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #555;
+    border-top: 1px solid #222;
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav div:last-child {
+        display: none;
+    }
+
+    section {
+        padding: 80px 6%;
+    }
+
+    .hero {
+        padding: 120px 6% 80px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+
+    <div class="logo">
+        MALIK<span>.</span>
+    </div>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#projects">Websites</a>
+        <a href="#skills">Skills</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="tag">
+            DEVELOPER • CREATOR • BUILDER
+        </div>
+
+        <h1>
+            My<br>
+            <span>Career.</span>
+        </h1>
+
+        <p>
+            I'm Malik, a developer who enjoys creating websites,
+            applications and digital projects. This website is
+            a collection of the projects I've built and published.
+        </p>
+
+        <a href="#projects" class="button">
+            Explore My Work
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="title">
+        About <span>Me</span>
+    </h2>
+
+    <p>
+        I started my programming journey with web development.
+        I enjoy turning ideas into real, working websites and
+        experimenting with new technologies.
+        <br><br>
+        Every project I publish is another step toward my goal
+        of becoming a professional developer.
+    </p>
+
+</section>
+
+
+<!-- WEBSITES -->
+<section class="projects" id="projects">
+
+    <h2 class="title">
+        My <span>Websites</span>
+    </h2>
+
+    <div class="project-grid">
+
+
+        <!-- WEBSITE 1 -->
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 01
+            </div>
+
+            <h3>
+                Website One
+            </h3>
+
+            <p>
+                My first published website.
+                Add a short description of what it does here.
+            </p>
+
+            <!-- PUT YOUR WEBSITE LINK HERE -->
+            <a href="https://malik7552.github.io/motivation-/
+                Visit Website →
+            </a>
+
+        </div>
+
+
+        <!-- WEBSITE 2 -->
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 02
+            </div>
+
+            <h3>
+                Website Two
+            </h3>
+
+            <p>
+                Another project I created and published online.
+            </p>
+
+            <!-- PUT YOUR WEBSITE LINK HERE -->
+            <a href="https://malik7552.github.io/ABOUT-ME-/"target="_blank'">
+                Visit Website →
+            </a>
+
+        </div>
+
+
+        <!-- WEBSITE 3 --
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 03
+            </div>
+
+            <h3>
+                Website 3
+            </h3>
+
+            <p>
+                One of my latest web development projects.
+            </p>
+
+            <!-- PUT YOUR WEBSITE LINK HERE -->
+            <a href="https://malik7552.github.io/Po/"target="_blank'">
+                Visit Website →
+            </a>
+
+          </div> 
+
+
+    </div>
+<!-- WEBSITE 3 --
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+            <h3>
+                Website 4
+            </h3>
+
+            <p>
+                One of my latest web development projects.
+            </p>
+
+            <!-- -->
+            <a href="https://malik7552.github.io/PIXELMIND/"target="_blank'">
+                Visit Website →
+            </a>
+
+          </div>
+
+<!-- WEBSITE 3 --
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+            <h3>
+                Website 4
+            </h3>
+
+            <p>
+                One of my latest web development projects.
+            </p>
+
+            <!-- -->
+            <a href="https://malik7552.github.io/Car/"target="_blank'">
+                Visit Website →
+            </a>
+
+          </div>
+
+<!-- WEBSITE 3 --
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+            <h3>
+                Website 4
+            </h3>
+
+            <p>
+                One of my latest web development projects.
+            </p>
+
+            <!-- -->
+            <a href=https://malik7552.github.io/Tictactoe/"target="_blank'">
+                Visit Website →
+            </a>
+
+          </div>
+
+<!-- WEBSITE 3 --
+        <div class="project">
+
+            <div class="project-number">
+                PROJECT 04
+            </div>
+
+            <h3>
+                Website 4
+            </h3>
+
+            <p>
+                One of my latest web development projects.
+            </p>
+
+            <!-- -->
+            <a href="" target="_blank">
+                Visit Website →
+            </a>
+
+          </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+
+    <h2 class="title">
+        My <span>Skills</span>
+    </h2>
+
+    <div class="skill-list">
+
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Web Development</div>
+        <div class="skill">UI Design</div>
+        <div class="skill">Roblox Development</div>
+        <div class="skill">Problem Solving</div>
+
+    </div>
+
+</section>
+
+
+<!-- FUTURE -->
+<section class="future">
+
+    <h2 class="title">
+        What's <span>Next?</span>
+    </h2>
+
+    <p>
+        More projects. More skills. Bigger ideas.
+        <br><br>
+        This portfolio will grow as I continue my career.
+    </p>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    © 2026 Malik • Developer Portfolio
+
+</footer>
+
+
+</body>
+</html>
+```
